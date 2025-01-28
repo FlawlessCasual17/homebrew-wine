@@ -6,12 +6,16 @@ class Order66 < Formula
 
   on_macos do
     if Hardware::CPU.is_64_bit?
-      url: "https://gitlab.com/olfek/order66/-/package_files/107183503/download",
+      url "https://gitlab.com/olfek/order66/-/package_files/107183503/download",
         filename: "order66-v1.0.3-osx-x64.zip"
-      sha256: "ce961d5072e8040e402e847789283b6e2f2bb9716a7c0821f041f3e22923304d"
+      sha256 "ce961d5072e8040e402e847789283b6e2f2bb9716a7c0821f041f3e22923304d"
+
+      def hash
+        stable.checksum.hexdigest if OS.macos?
+      end
 
       def install
-        system "unzip", "#{sha256}--#{filename}"
+        system "unzip", "#{hash}--#{filename}"
         bin.install "Order66"
       end
     end
@@ -19,12 +23,16 @@ class Order66 < Formula
 
   on_linux do
     if Hardware::CPU.is_64_bit?
-      url: "https://gitlab.com/olfek/order66/-/package_files/107183497/download",
+      url "https://gitlab.com/olfek/order66/-/package_files/107183497/download",
         filename: "order66-v1.0.3-linux-x64.zip"
-      sha256: "08defa0fe2f7927d3fb9217a4815d884a5c0cd00b31115c68cb593767a276fee"
+      sha256 "08defa0fe2f7927d3fb9217a4815d884a5c0cd00b31115c68cb593767a276fee"
+
+      def hash
+        stable.checksum.hexdigest if OS.linux?
+      end
 
       def install
-        system "unzip", "#{sha256}--#{filename}"
+        system "unzip", "#{hash}--#{filename}"
         bin.install "Order66"
       end
     end
