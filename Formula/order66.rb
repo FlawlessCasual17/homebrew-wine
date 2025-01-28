@@ -1,5 +1,5 @@
 class Order66 < Formula
-  desc "A no fuss, cross-platform, single host, local file sync."
+  desc "The no fuss, cross-platform, single host, local file sync tool."
   homepage "https://gitlab.com/olfek/order66"
   version "1.0.3"
   license "AGPL-3.0"
