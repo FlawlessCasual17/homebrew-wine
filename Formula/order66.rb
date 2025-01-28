@@ -11,7 +11,7 @@ class Order66 < Formula
 
       def install
         bin.install "Order66"
-        bin.mkpath "bin" # create the bin directory if it doesn't exist
+        bin.mkpath # create the bin directory if it doesn't exist
         bin.link "Order66", "Order66" # link the executable to the bin directory
       end
     end
@@ -24,7 +24,7 @@ class Order66 < Formula
 
       def install
         bin.install "Order66"
-        bin.mkpath "bin" # create the bin directory if it doesn't exist
+        bin.mkpath # create the bin directory if it doesn't exist
         bin.link "Order66", "Order66" # link the executable to the bin directory
       end
     end
