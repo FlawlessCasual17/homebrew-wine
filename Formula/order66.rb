@@ -10,7 +10,9 @@ class Order66 < Formula
       sha256 "ce961d5072e8040e402e847789283b6e2f2bb9716a7c0821f041f3e22923304d"
 
       def install
-        bin.install "*"
+        Dir.foreach('.') do |filename|
+          bin.install filename
+        end
       end
     end
   end
@@ -21,7 +23,9 @@ class Order66 < Formula
       sha256 "08defa0fe2f7927d3fb9217a4815d884a5c0cd00b31115c68cb593767a276fee"
 
       def install
-        bin.install "*"
+        Dir.foreach('.') do |filename|
+          bin.install filename
+        end
       end
     end
   end
