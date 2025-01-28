@@ -21,8 +21,7 @@ class Order66 < Formula
   def install
     libexec.install Dir["*"]
 
-    exec_file = Dir["#{libexec}/Order66"].find { |f| File.executable?(f) && !File.directory?(f) }s
-    raise "Could not find main executable in archive" if exec_file.nil?
+    exec_file = Dir["#{libexec}/Order66"].first
 
     bin.install_symlink exec_file
   end
