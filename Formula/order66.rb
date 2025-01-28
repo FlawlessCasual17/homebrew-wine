@@ -1,5 +1,5 @@
 class Order66 < Formula
-  desc "A no fuss, cross-platform, single host, local file sync alternative to Windows Robocopy and Linux/Unix Rsync."
+  desc "A no fuss, cross-platform, single host, local file sync."
   homepage "https://gitlab.com/olfek/order66"
   version "1.0.3"
   license "AGPL-3.0"
